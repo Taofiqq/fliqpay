@@ -2,6 +2,10 @@ import { useState } from "react";
 import { Tab, TabPanel, Tabs } from "./Tabs";
 import styled from "styled-components";
 import HeaderText from "../../reusuableComponents/HeaderText";
+
+const mediaQueries = {
+  mediumScreen: "@media (max-width: 380px)",
+};
 const Receipient = ({ currentStep, updateStep }) => {
   const [activeTab, setActiveTab] = useState(1);
 
@@ -66,6 +70,10 @@ const ReceipientContainer = styled.div`
   box-sizing: border-box;
   border-radius: 6px;
   padding: 35px;
+   ${mediaQueries.mediumScreen} {
+    border: none;
+    width: 414px;
+  }
 `;
 
 const BankDetails = styled.h1`

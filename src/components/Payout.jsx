@@ -4,7 +4,7 @@ import HeaderText from "../reusuableComponents/HeaderText";
 import Currency from "./Currency";
 
 const mediaQueries = {
-  mediumScreen: "@media (max-width: 768px)",
+  mediumScreen: "@media (max-width: 380px)",
 };
 
 const Payout = ({ currentStep, updateStep }) => {
@@ -34,8 +34,6 @@ const PayoutContainer = styled.div`
   ${mediaQueries.mediumScreen} {
     border: none;
     width: 414px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
   /* justify-content: center;
   align-items: center; */

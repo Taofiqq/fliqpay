@@ -1,4 +1,7 @@
 import styled from "styled-components";
+const mediaQueries = {
+  mediumScreen: "@media (max-width: 380px)",
+};
 const Review = ({ currentStep, updateStep }) => {
   return (
     <ReviewContainer>
@@ -57,6 +60,10 @@ const ReviewContainer = styled.div`
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
   border-radius: 6px;
+  ${mediaQueries.mediumScreen} {
+    border: none;
+    width: 514px;
+  }
 `;
 const Text = styled.h1`
   font-style: normal;
@@ -70,14 +77,32 @@ const Line = styled.div`
   height: 0px;
   border: 1px solid #f2f2f2;
   margin-top: 13px;
+
+  ${mediaQueries.mediumScreen} {
+    width: 42px;
+  }
 `;
 const DetailsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 19px;
 `;
-const Send = styled.p``;
-const Amount = styled.span``;
+const Send = styled.p`
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: 24px; */
+  letter-spacing: 0em;
+  text-align: left;
+`;
+const Amount = styled.span`
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: 24px; */
+  letter-spacing: 0em;
+  text-align: right;
+`;
 const Button = styled.button`
   width: 443.69px;
   height: 50px;

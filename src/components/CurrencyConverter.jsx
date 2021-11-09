@@ -2,7 +2,7 @@ import styled from "styled-components";
 import dropDown from "../assests/dropdown.svg";
 
 const mediaQueries = {
-  mediumScreen: "@media (max-width: 768px)",
+  mediumScreen: "@media (max-width: 380px)",
 };
 const CurrencyConverter = ({
   currencyOptions,
@@ -31,10 +31,6 @@ const CurrencyConverter = ({
 const CurrencyInputContainer = styled.div`
   display: flex;
   margin-top: 19px;
-
-  ${mediaQueries.mediumScreen} {
-    padding-right: 20px;
-  }
 `;
 const InputContainer = styled.div`
   display: flex;
@@ -44,6 +40,10 @@ const InputContainer = styled.div`
   border: 1px solid #e8e8e8;
   padding: 9px 20px;
   margin-bottom: 12px;
+
+  ${mediaQueries.mediumScreen} {
+    width: 183px;
+  }
 `;
 const Text = styled.span`
   font-size: 12px;
@@ -89,6 +89,10 @@ const Select = styled.select`
   &:hover {
     outline: none;
     border: none;
+  }
+
+  ${mediaQueries.mediumScreen} {
+    width: 79.2px;
   }
 `;
 const Option = styled.option`

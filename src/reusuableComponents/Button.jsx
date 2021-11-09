@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const mediaQueries = {
-  mediumScreen: "@media (max-width: 768px)",
+  mediumScreen: "@media (max-width: 380px)",
 };
 const Button = ({ currentStep, updateStep }) => {
   return (
@@ -23,11 +23,7 @@ const ButtonContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    ${mediaQueries.mediumScreen} {
-      display: inline-block;
-    }
+    align-items: flex-start;
   }
   /* justify-content: space-evenly; */
 `;
@@ -44,7 +40,7 @@ const CompareButton = styled.button`
   ${mediaQueries.mediumScreen} {
     margin-bottom: 10px;
     margin-right: 0;
-    width: calc(373px - 20px);
+    width: calc(253px - 20px);
   }
 `;
 const ContinueButton = styled.button`
@@ -55,7 +51,7 @@ const ContinueButton = styled.button`
   height: 50px;
   cursor: pointer;
   ${mediaQueries.mediumScreen} {
-    width: calc(373px - 20px);
+    width: calc(253px - 20px);
   }
 `;
 export default Button;

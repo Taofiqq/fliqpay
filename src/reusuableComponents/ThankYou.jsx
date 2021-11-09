@@ -1,4 +1,8 @@
 import styled from "styled-components";
+
+const mediaQueries = {
+  mediumScreen: "@media (max-width: 380px)",
+};
 const ThankYou = () => {
   return (
     <ThankYouContainer>
@@ -19,6 +23,11 @@ const ThankYouContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${mediaQueries.mediumScreen} {
+    border: none;
+    width: 314px;
+  }
 `;
 const ThankYouTitle = styled.h1`
   font-style: normal;
@@ -26,6 +35,9 @@ const ThankYouTitle = styled.h1`
   font-size: 16px;
   line-height: 24px;
   color: #2c0c6a;
+  ${mediaQueries.mediumScreen} {
+    font-size: 10px;
+  }
 `;
 const ThankYouSubtitle = styled.h2`
   font-style: normal;
@@ -33,6 +45,10 @@ const ThankYouSubtitle = styled.h2`
   font-size: 12px;
   line-height: 24px;
   color: #2c0c6a;
+
+  ${mediaQueries.mediumScreen} {
+    font-size: 8px;
+  }
 `;
 
 export default ThankYou;
