@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import minus from "../../assests/minus.svg";
-const Rates = () => {
+const Rates = ({ value }) => {
   return (
     <FliqPayTerms>
       <Line></Line>
@@ -11,7 +11,7 @@ const Rates = () => {
       </ImageTerms>
       <AmountTerms>
         <Amount>3.69 USD </Amount>
-        <Amount>996.31 EUR </Amount>
+        <Amount>{value} </Amount>
         <Amount>1.14989 </Amount>
       </AmountTerms>
       <TextTerms>

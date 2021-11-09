@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import dropDown from "../assests/dropdown.svg";
+
+const mediaQueries = {
+  mediumScreen: "@media (max-width: 768px)",
+};
 const CurrencyConverter = ({
   currencyOptions,
   selectedCurrency,
@@ -27,6 +31,10 @@ const CurrencyConverter = ({
 const CurrencyInputContainer = styled.div`
   display: flex;
   margin-top: 19px;
+
+  ${mediaQueries.mediumScreen} {
+    padding-right: 20px;
+  }
 `;
 const InputContainer = styled.div`
   display: flex;
@@ -53,6 +61,10 @@ const Input = styled.input`
   ::-webkit-outer-spin-button,
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
+    -moz-appearance: text-field;
+  }
+  &[type="number"] {
+    -moz-appearance: textfield;
   }
   &:focus,
   &:hover {

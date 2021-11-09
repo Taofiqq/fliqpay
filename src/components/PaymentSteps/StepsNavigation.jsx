@@ -1,6 +1,9 @@
 import Steps from "./Steps";
 import styled from "styled-components";
 
+const mediaQueries = {
+  mediumScreen: "@media (max-width: 768px)",
+};
 const StepsNavigation = ({ labelArray, updateStep, currentStep }) => {
   return (
     <StepNavigationWrapper>
@@ -22,6 +25,11 @@ const StepsNavigation = ({ labelArray, updateStep, currentStep }) => {
 const StepNavigationWrapper = styled.div`
   display: flex;
   position: relative;
+
+  ${mediaQueries.mediumScreen} {
+    grid-row: 4/5;
+    justify-content: center;
+  }
   /* flex-direction: column; */
 `;
 

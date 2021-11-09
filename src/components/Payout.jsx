@@ -3,6 +3,10 @@ import Button from "../reusuableComponents/Button";
 import HeaderText from "../reusuableComponents/HeaderText";
 import Currency from "./Currency";
 
+const mediaQueries = {
+  mediumScreen: "@media (max-width: 768px)",
+};
+
 const Payout = ({ currentStep, updateStep }) => {
   return (
     <PayoutContainer>
@@ -26,6 +30,13 @@ const PayoutContainer = styled.div`
   padding: 33px;
   display: flex;
   flex-direction: column;
+
+  ${mediaQueries.mediumScreen} {
+    border: none;
+    width: 414px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   /* justify-content: center;
   align-items: center; */
 `;

@@ -70,7 +70,7 @@ const Currency = () => {
         amount={fromAmount}
         onChangeAmount={handleFromAmountChange}
       />
-      <Rates />
+      <Rates value={toAmount} />
       <CurrencyConverter
         currencyOptions={currencyOptions}
         selectedCurrency={toCurrency}
