@@ -9,7 +9,10 @@ const CurrencyConverter = ({
 }) => {
   return (
     <CurrencyInputContainer>
-      <Input type="number" value={amount} onChange={onChangeAmount} />
+      <InputContainer>
+        <Text>You send</Text>
+        <Input type="number" value={amount} onChange={onChangeAmount} />
+      </InputContainer>
       <Select value={selectedCurrency} onChange={onChangeCurrency}>
         {currencyOptions.map((item) => (
           <Option key={item} value={item}>
@@ -25,12 +28,28 @@ const CurrencyInputContainer = styled.div`
   display: flex;
   margin-top: 19px;
 `;
-const Input = styled.input`
+const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 442.72px;
   height: 65px;
   border: 1px solid #e8e8e8;
-  padding: 0px 20px;
+  padding: 9px 20px;
   margin-bottom: 12px;
+`;
+const Text = styled.span`
+  font-size: 12px;
+`;
+const Input = styled.input`
+  width: 182.1px;
+  height: 22.94px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  color: #8b8f96;
+  margin-top: 3px;
+  border: none;
   ::-webkit-outer-spin-button,
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;

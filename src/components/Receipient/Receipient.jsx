@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Tab, TabPanel, Tabs } from "./Tabs";
 import styled from "styled-components";
 import HeaderText from "../../reusuableComponents/HeaderText";
-const Receipient = () => {
+const Receipient = ({ currentStep, updateStep }) => {
   const [activeTab, setActiveTab] = useState(1);
 
   const handleChange = (e, value) => {
@@ -49,7 +49,9 @@ const Receipient = () => {
         </TabPanel>
       </TabsPanelContainer>
 
-      <ContinueButton>Continue</ContinueButton>
+      <ContinueButton onClick={() => updateStep(currentStep + 1)}>
+        Continue
+      </ContinueButton>
     </ReceipientContainer>
   );
 };
@@ -58,7 +60,7 @@ const ReceipientContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 508px;
-  height: 686px;
+  height: 656px;
   background: #ffffff;
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
@@ -107,6 +109,7 @@ const Input = styled.input`
 `;
 const ContinueButton = styled.button`
   width: 443.69px;
+  padding: 10px;
   height: 50px;
   background: #4305eb;
   border-radius: 6px;
@@ -114,6 +117,8 @@ const ContinueButton = styled.button`
   border: none;
   margin-top: 20px;
   color: white;
+  cursor: pointer;
+  margin-top: -3px;
 `;
 
 // Tabs

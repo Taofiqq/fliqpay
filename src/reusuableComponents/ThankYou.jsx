@@ -34,4 +34,5 @@ const ThankYouSubtitle = styled.h2`
   line-height: 24px;
   color: #2c0c6a;
 `;
+
 export default ThankYou;

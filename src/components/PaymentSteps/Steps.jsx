@@ -17,5 +17,6 @@ const Labels = styled.div`
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  margin-top: 7px;
 `;
 export default Steps;

@@ -7,7 +7,6 @@ import StepsNavigation from "./components/PaymentSteps/StepsNavigation";
 import logo from "./assests/logo.png";
 import cancel from "./assests/cancel.svg";
 import ThankYou from "./reusuableComponents/ThankYou";
-// import Payment from "./components/PaymentSteps/Payment";
 
 function App() {
   const labelArray = ["Amount", "Receipient", "Review", "Pay"];
@@ -30,9 +29,15 @@ function App() {
         <Cancel src={cancel} />
       </AppContainer>
       <CardsStyle>
-        {currentStep === 1 && <Payout />}
-        {currentStep === 2 && <Receipient />}
-        {currentStep === 3 && <Review />}
+        {currentStep === 1 && (
+          <Payout currentStep={currentStep} updateStep={setCurrentStep} />
+        )}
+        {currentStep === 2 && (
+          <Receipient currentStep={currentStep} updateStep={setCurrentStep} />
+        )}
+        {currentStep === 3 && (
+          <Review currentStep={currentStep} updateStep={setCurrentStep} />
+        )}
         {currentStep === 4 && <ThankYou />}
       </CardsStyle>
     </>
@@ -49,9 +54,11 @@ const AppContainer = styled.div`
 `;
 const Logo = styled.img`
   width: 40px;
+  cursor: pointer;
 `;
 const Cancel = styled.img`
   width: 10px;
+  cursor: pointer;
 `;
 
 const CardsStyle = styled.div`

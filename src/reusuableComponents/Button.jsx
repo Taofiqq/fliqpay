@@ -1,9 +1,13 @@
 import styled from "styled-components";
-const Button = () => {
+const Button = ({ currentStep, updateStep }) => {
   return (
     <ButtonContainer>
-      <CompareButton>Compare Rates</CompareButton>
-      <ContinueButton>Continue</ContinueButton>
+      <CompareButton>
+        <a href="https://xe.com">Compare Rates</a>
+      </CompareButton>
+      <ContinueButton onClick={() => updateStep(currentStep + 1)}>
+        Continue
+      </ContinueButton>
     </ButtonContainer>
   );
 };
@@ -28,5 +32,6 @@ const ContinueButton = styled.button`
   border: none;
   width: 210.71px;
   height: 50px;
+  cursor: pointer;
 `;
 export default Button;

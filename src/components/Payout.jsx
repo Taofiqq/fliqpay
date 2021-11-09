@@ -3,7 +3,7 @@ import Button from "../reusuableComponents/Button";
 import HeaderText from "../reusuableComponents/HeaderText";
 import Currency from "./Currency";
 
-const Payout = () => {
+const Payout = ({ currentStep, updateStep }) => {
   return (
     <PayoutContainer>
       <HeaderText
@@ -11,14 +11,14 @@ const Payout = () => {
         secondText="Send money internationally"
       />
       <Currency />
-      <Button />
+      <Button currentStep={currentStep} updateStep={updateStep} />
     </PayoutContainer>
   );
 };
 
 const PayoutContainer = styled.div`
   width: 508px;
-  height: 372px;
+  height: 460px;
   background: #ffffff;
   border: 1px solid #f2f2f2;
   box-sizing: border-box;

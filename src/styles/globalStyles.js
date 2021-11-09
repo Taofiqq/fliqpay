@@ -7,6 +7,8 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Work Sans', sans-serif;
+        list-style:  none;
+        text-decoration: none;
      
     }
 

@@ -4,6 +4,8 @@ import styled from "styled-components";
 const StepsNavigation = ({ labelArray, updateStep, currentStep }) => {
   return (
     <StepNavigationWrapper>
+      <Progress value={currentStep} max="4" fill="red"></Progress>
+
       {labelArray.map((item, index) => (
         <Steps
           label={item}
@@ -19,5 +21,19 @@ const StepsNavigation = ({ labelArray, updateStep, currentStep }) => {
 
 const StepNavigationWrapper = styled.div`
   display: flex;
+  position: relative;
+  /* flex-direction: column; */
 `;
+
+const Progress = styled.progress`
+  width: 536px;
+  height: 3px;
+  background: #ededed;
+  border-radius: 5px;
+  position: absolute;
+  &::-webkit-progress-value {
+    background: linear-gradient(90deg, #4305eb 64.83%, #636166 99.42%);
+  }
+`;
+
 export default StepsNavigation;

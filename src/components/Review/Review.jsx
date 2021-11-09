@@ -1,5 +1,5 @@
 import styled from "styled-components";
-const Review = () => {
+const Review = ({ currentStep, updateStep }) => {
   return (
     <ReviewContainer>
       <Text>Review details of your transfer</Text>
@@ -40,7 +40,9 @@ const Review = () => {
         <Amount>DE898919013902102D</Amount>
       </DetailsContainer>
 
-      <Button>Confirm and Continue</Button>
+      <Button onClick={() => updateStep(currentStep + 1)}>
+        Confirm and Continue
+      </Button>
     </ReviewContainer>
   );
 };
@@ -85,5 +87,6 @@ const Button = styled.button`
   outline: none;
   margin-top: 33px;
   color: white;
+  cursor: pointer;
 `;
 export default Review;
