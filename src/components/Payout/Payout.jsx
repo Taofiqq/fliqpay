@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Button from "../reusuableComponents/Button";
-import HeaderText from "../reusuableComponents/HeaderText";
+import Button from "../../reusuableComponents/Button";
+import HeaderText from "../../reusuableComponents/HeaderText";
 import Currency from "./Currency";
 
 const mediaQueries = {

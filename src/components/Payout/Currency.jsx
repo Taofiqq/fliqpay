@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import CurrencyConverter from "./CurrencyConverter";
 import axios from "axios";
-import Rates from "./PaymentSteps/Rates";
+import Rates from "../PaymentSteps/Rates";
 
 const options = {
   method: "GET",

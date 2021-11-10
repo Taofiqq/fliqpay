@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import dropDown from "../assests/dropdown.svg";
+import dropDown from "../../assests/dropdown.svg";
 
 const mediaQueries = {
   mediumScreen: "@media (max-width: 380px)",

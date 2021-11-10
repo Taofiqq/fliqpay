@@ -1,16 +1,20 @@
+// imports
 import { useState } from "react";
-import Payout from "./components/Payout";
+import Payout from "./components/Payout/Payout";
 import Review from "./components/Review/Review";
 import Receipient from "./components/Receipient/Receipient";
-import styled from "styled-components";
 import StepsNavigation from "./components/PaymentSteps/StepsNavigation";
+import ThankYou from "./reusuableComponents/ThankYou";
+import styled from "styled-components";
 import logo from "./assests/logo.png";
 import cancel from "./assests/cancel.svg";
-import ThankYou from "./reusuableComponents/ThankYou";
 
+// media query for responsiveness
 const mediaQueries = {
   mediumScreen: "@media (max-width: 768px)",
 };
+
+// App component
 
 function App() {
   const labelArray = ["Amount", "Receipient", "Review", "Pay"];
