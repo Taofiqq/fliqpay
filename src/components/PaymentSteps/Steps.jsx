@@ -20,20 +20,20 @@ const Labels = styled.div`
   text-align: left;
   margin-top: 7px;
 
-  ${mediaQueries("xs")`
-    margin-right: 27px;
-    margin-top: 2rem;
-  `}
-  ${mediaQueries("sm")`
-    margin-right: 27px;
-    margin-top: 2rem;
-  `} 
   ${mediaQueries("md")`
     margin-right: 27px;
     margin-top: 2rem;
-  `} 
+  `}
   ${mediaQueries("lg")`
     margin-right: 57px;
+    margin-top: 2rem;
+  `}
+  ${mediaQueries("md")`
+  margin-right: 23px;
+    margin-top: 2rem;
+  `}
+  ${mediaQueries("xs")`
+  margin-right: 17px;
     margin-top: 2rem;
   `}
 `;

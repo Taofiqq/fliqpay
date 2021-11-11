@@ -28,16 +28,13 @@ const StepNavigationWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top:-1rem;
+
   `}
   ${mediaQueries("sm")`
   justify-content: space-between;
   align-items: center;
   margin-top:-1rem;
-  `} /* ${mediaQueries("md")`
-  justify-content: space-between;
-  align-items: center;
-  margin-top:-1rem;
-  `} */
+  `}
 `;
 
 const Progress = styled.progress`
@@ -49,18 +46,18 @@ const Progress = styled.progress`
   &::-webkit-progress-value {
     background: linear-gradient(90deg, #4305eb 64.83%, #636166 99.42%);
   }
-  ${mediaQueries("xs")`
-  width: 293px
-  `}
 
-  ${mediaQueries("sm")`
-  width: 303px
-  `} 
-  ${mediaQueries("md")`
-  width: 323px
-  `} 
   ${mediaQueries("lg")`
   width: 433px
+  `}
+  ${mediaQueries("md")`
+  width: 323px
+  `}
+  ${mediaQueries("sm")`
+  width: 298px;
+  `}
+  ${mediaQueries("xs")`
+  width: 280px;
   `}
 `;
 
