@@ -28,6 +28,7 @@ const StepNavigationWrapper = styled.div`
 
   ${mediaQueries.mediumScreen} {
     grid-row: 4/5;
+    grid-column: 2 / -1;
     justify-content: center;
   }
   /* flex-direction: column; */

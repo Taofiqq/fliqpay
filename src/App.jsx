@@ -60,24 +60,36 @@ const NavbarContainer = styled.div`
   padding-bottom: 21px;
 
   ${mediaQueries("lg")`
-  margin-top: 0;
- background-color: green;
+  margin-top: 5px;
 overflow: hidden;
+display: grid;
+grid-template-columns: repea(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-gap: 1rem;
   `}
   ${mediaQueries("md")`
-  margin-top: 0;
-  background-color: yellow;
-  overflow: hidden;
+  margin-top: 5px;
+overflow: hidden;
+display: grid;
+grid-template-columns: repea(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-gap: 1rem;
   `}
   ${mediaQueries("sm")`
-  margin-top: 0;
- background-color: green;
+  margin-top: 5px;
 overflow: hidden;
+display: grid;
+grid-template-columns: repea(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-gap: 1rem;
   `}
   ${mediaQueries("xs")`
-  margin-top: 0;
- background-color: green;
+  margin-top: 5px;
 overflow: hidden;
+display: grid;
+grid-template-columns: repea(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-gap: 1rem;
   `}
 `;
 const Logo = styled.img`

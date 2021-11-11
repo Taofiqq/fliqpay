@@ -2,10 +2,8 @@ import { useState } from "react";
 import { Tab, TabPanel, Tabs } from "./Tabs";
 import styled from "styled-components";
 import HeaderText from "../../reusuableComponents/HeaderText";
+import { mediaQueries } from "../../reusuableComponents/mediaQueries";
 
-const mediaQueries = {
-  mediumScreen: "@media (max-width: 380px)",
-};
 const Receipient = ({ currentStep, updateStep }) => {
   const [activeTab, setActiveTab] = useState(1);
 
@@ -70,10 +68,31 @@ const ReceipientContainer = styled.div`
   box-sizing: border-box;
   border-radius: 6px;
   padding: 35px;
-  ${mediaQueries.mediumScreen} {
-    border: none;
-    width: 414px;
-  }
+
+  ${mediaQueries("md")`
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  `}
+  ${mediaQueries("sm")`
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  `}
+  ${mediaQueries("xs")`
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  `}
 `;
 
 const BankDetails = styled.h1`
@@ -93,6 +112,10 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+
+  ${mediaQueries("xs")`
+justify-content: center;
+  `}
 `;
 const Label = styled.label`
   font-style: normal;
@@ -114,6 +137,13 @@ const Input = styled.input`
   &:hover {
     outline: none;
   }
+
+  ${mediaQueries("md")`
+  width: 303px;
+  `}
+  ${mediaQueries("xs")`
+  width: 233px;
+  `}
 `;
 const ContinueButton = styled.button`
   width: 443.69px;
@@ -127,6 +157,16 @@ const ContinueButton = styled.button`
   color: white;
   cursor: pointer;
   margin-top: -3px;
+
+  ${mediaQueries("md")`
+ width: 380px;
+  `}
+  ${mediaQueries("sm")`
+ width: 313px;
+  `}
+  ${mediaQueries("xs")`
+ width: 273px;
+  `}
 `;
 
 // Tabs
@@ -136,6 +176,9 @@ const TabsSliderContainer = styled.div`
 `;
 const TabsPanelContainer = styled.div`
   height: auto;
+  ${mediaQueries("md")`
+justify-content: center;
+  `}
 `;
 
 const IbanLabel = styled.label`
@@ -165,6 +208,12 @@ const IbanInput = styled.input`
     font-size: 14px;
     line-height: 24px;
   }
+  ${mediaQueries("md")`
+  width: 303px;
+  `}
+  ${mediaQueries("xs")`
+  width: 233px;
+  `}
 `;
 const SwiftLabel = styled.label`
   font-style: normal;
