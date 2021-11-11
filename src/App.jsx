@@ -8,11 +8,9 @@ import ThankYou from "./reusuableComponents/ThankYou";
 import styled from "styled-components";
 import logo from "./assests/logo.png";
 import cancel from "./assests/cancel.svg";
-
-// media query for responsiveness
-const mediaQueries = {
-  mediumScreen: "@media (max-width: 768px)",
-};
+import GlobalStyles from "./styles/globalStyles";
+import Scroll from "./components/SmoothScroll";
+import { mediaQueries } from "./reusuableComponents/mediaQueries";
 
 // App component
 
@@ -26,16 +24,17 @@ function App() {
 
   return (
     <>
-      <AppContainer>
+      <GlobalStyles />
+      <Scroll />
+      <NavbarContainer>
         <Logo src={logo} alt="company logo" />
-        {/* <Payment /> */}
         <StepsNavigation
           labelArray={labelArray}
           currentStep={currentStep}
           updateStep={updateStep}
         />
         <Cancel src={cancel} />
-      </AppContainer>
+      </NavbarContainer>
       <CardsStyle>
         {currentStep === 1 && (
           <Payout currentStep={currentStep} updateStep={setCurrentStep} />
@@ -52,7 +51,7 @@ function App() {
   );
 }
 
-const AppContainer = styled.div`
+const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -60,13 +59,26 @@ const AppContainer = styled.div`
   margin-top: 30px;
   padding-bottom: 21px;
 
-  ${mediaQueries.mediumScreen} {
-    /* display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 2px;
-    padding-left: 15px; */
-    display: none;
-  }
+  ${mediaQueries("lg")`
+  margin-top: 0;
+ background-color: green;
+overflow: hidden;
+  `}
+  ${mediaQueries("md")`
+  margin-top: 0;
+  background-color: yellow;
+  overflow: hidden;
+  `}
+  ${mediaQueries("sm")`
+  margin-top: 0;
+ background-color: green;
+overflow: hidden;
+  `}
+  ${mediaQueries("xs")`
+  margin-top: 0;
+ background-color: green;
+overflow: hidden;
+  `}
 `;
 const Logo = styled.img`
   width: 40px;
@@ -92,15 +104,18 @@ const CardsStyle = styled.div`
   align-items: center;
   background-color: #f5f5f5;
   height: 100vh;
-  overflow: hidden;
 
-  ${mediaQueries.mediumScreen} {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-  }
+  ${mediaQueries("md")`
+  background-color: white;
+  overflow: hidden;
+  `}
+  ${mediaQueries("sm")`
+  background-color: white;
+  overflow: hidden;
+  `}
+  ${mediaQueries("xs")`
+  background-color: white;
+  overflow: hidden;
+  `}
 `;
 export default App;

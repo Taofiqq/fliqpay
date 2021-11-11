@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
+// global styles to be applied for the whole app.
 const GlobalStyles = createGlobalStyle`
 
     * {
@@ -13,9 +14,9 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        width: 100vw;
+        margin:0;
+        padding:0;
         height: 100vh;
-        overflow-x: hidden;
     }
 
 `;

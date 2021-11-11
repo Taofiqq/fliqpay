@@ -64,13 +64,13 @@ const ReceipientContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 508px;
-  height: 656px;
+  height: auto;
   background: #ffffff;
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
   border-radius: 6px;
   padding: 35px;
-   ${mediaQueries.mediumScreen} {
+  ${mediaQueries.mediumScreen} {
     border: none;
     width: 414px;
   }

@@ -1,7 +1,6 @@
 import styled from "styled-components";
-const mediaQueries = {
-  mediumScreen: "@media (max-width: 380px)",
-};
+import { mediaQueries } from "../../reusuableComponents/mediaQueries";
+
 const Review = ({ currentStep, updateStep }) => {
   return (
     <ReviewContainer>
@@ -60,10 +59,23 @@ const ReviewContainer = styled.div`
   border: 1px solid #f2f2f2;
   box-sizing: border-box;
   border-radius: 6px;
-  ${mediaQueries.mediumScreen} {
-    border: none;
-    width: 514px;
-  }
+
+  ${mediaQueries("md")`
+  border: none;
+
+  `}
+  ${mediaQueries("sm")`
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  `}
+  ${mediaQueries("xs")`
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  `}
 `;
 const Text = styled.h1`
   font-style: normal;
@@ -71,6 +83,12 @@ const Text = styled.h1`
   font-size: 18px;
   line-height: 24px;
   color: #2c0c6a;
+  ${mediaQueries("sm")`
+  font-size: 14px;
+  `}
+  ${mediaQueries("xs")`
+  font-size: 14px;
+  `}
 `;
 const Line = styled.div`
   width: 443px;
@@ -78,30 +96,50 @@ const Line = styled.div`
   border: 1px solid #f2f2f2;
   margin-top: 13px;
 
-  ${mediaQueries.mediumScreen} {
-    width: 42px;
-  }
+  ${mediaQueries("sm")`
+  width: 250px;
+  `}
+  ${mediaQueries("xs")`
+  width: 250px;
+  `}
 `;
 const DetailsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 19px;
+
+  ${mediaQueries("xs")`
+
+  `}
 `;
 const Send = styled.p`
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  /* line-height: 24px; */
   letter-spacing: 0em;
   text-align: left;
+  ${mediaQueries("sm")`
+  font-size: 8px;
+  margin-right: 3rem; 
+  `}
+  ${mediaQueries("xs")`
+  font-size: 8px;
+  margin-right: 3rem; 
+  `}
 `;
 const Amount = styled.span`
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  /* line-height: 24px; */
   letter-spacing: 0em;
   text-align: right;
+
+  ${mediaQueries("sm")`
+  font-size: 8px;
+  `}
+  ${mediaQueries("xs")`
+  font-size: 8px;
+  `}
 `;
 const Button = styled.button`
   width: 443.69px;
@@ -113,5 +151,11 @@ const Button = styled.button`
   margin-top: 33px;
   color: white;
   cursor: pointer;
+  ${mediaQueries("sm")`
+ width: 200px;
+  `}
+  ${mediaQueries("xs")`
+ width: 200px;
+  `}
 `;
 export default Review;

@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import dropDown from "../../assests/dropdown.svg";
-
-const mediaQueries = {
-  mediumScreen: "@media (max-width: 380px)",
-};
+import { mediaQueries } from "../../reusuableComponents/mediaQueries";
 const CurrencyConverter = ({
   currencyOptions,
   selectedCurrency,
@@ -41,9 +38,15 @@ const InputContainer = styled.div`
   padding: 9px 20px;
   margin-bottom: 12px;
 
-  ${mediaQueries.mediumScreen} {
-    width: 183px;
-  }
+  ${mediaQueries("md")`
+  width: 183px;
+  `}
+  ${mediaQueries("sm")`
+  width: 183px;
+  `}
+  ${mediaQueries("xs")`
+  width: 183px;
+  `}
 `;
 const Text = styled.span`
   font-size: 12px;
@@ -91,9 +94,16 @@ const Select = styled.select`
     border: none;
   }
 
-  ${mediaQueries.mediumScreen} {
-    width: 79.2px;
-  }
+  ${mediaQueries("md")`
+  width: 79.2px;
+  `}
+  ${mediaQueries("sm")`
+  width: 79.2px;
+  `}
+
+  ${mediaQueries("xs")`
+  width: 79.2px;
+  `}
 `;
 const Option = styled.option`
   text-align: center;

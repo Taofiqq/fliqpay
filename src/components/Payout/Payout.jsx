@@ -2,10 +2,7 @@ import styled from "styled-components";
 import Button from "../../reusuableComponents/Button";
 import HeaderText from "../../reusuableComponents/HeaderText";
 import Currency from "./Currency";
-
-const mediaQueries = {
-  mediumScreen: "@media (max-width: 380px)",
-};
+import { mediaQueries } from "../../reusuableComponents/mediaQueries";
 
 const Payout = ({ currentStep, updateStep }) => {
   return (
@@ -31,12 +28,31 @@ const PayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  ${mediaQueries.mediumScreen} {
-    border: none;
-    width: 414px;
-  }
-  /* justify-content: center;
-  align-items: center; */
+  ${mediaQueries("md")`
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  `}
+  ${mediaQueries("sm")`
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  `}
+
+  ${mediaQueries("xs")`
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  `}
 `;
 
 export default Payout;
