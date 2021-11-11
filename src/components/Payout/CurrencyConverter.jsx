@@ -7,12 +7,18 @@ const CurrencyConverter = ({
   onChangeAmount,
   onChangeCurrency,
   amount,
+  text,
 }) => {
   return (
     <CurrencyInputContainer>
       <InputContainer>
-        <Text>You send</Text>
-        <Input type="number" value={amount} onChange={onChangeAmount} />
+        <Text>{text}</Text>
+        <Input
+          type="number"
+          value={amount}
+          text={text}
+          onChange={onChangeAmount}
+        />
       </InputContainer>
       <Select value={selectedCurrency} onChange={onChangeCurrency}>
         {currencyOptions.map((item) => (
@@ -50,6 +56,7 @@ const InputContainer = styled.div`
 `;
 const Text = styled.span`
   font-size: 12px;
+  font-weight: 400;
 `;
 const Input = styled.input`
   width: 182.1px;

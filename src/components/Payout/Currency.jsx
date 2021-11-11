@@ -3,7 +3,7 @@ import CurrencyConverter from "./CurrencyConverter";
 import axios from "axios";
 import Rates from "../PaymentSteps/Rates";
 
-const options = {
+const converterAPI = {
   method: "GET",
   url: "https://currencyapi-net.p.rapidapi.com/rates",
   params: { output: "JSON", base: "USD" },
@@ -12,6 +12,16 @@ const options = {
     "x-rapidapi-key": "5cf25132e5msh07ce895df09bd96p1fb02ajsn623ba5792950",
   },
 };
+
+// objects to display the text on the currency converter
+const text = {
+  firstText: "You Send",
+  secondText: "Receipient gets",
+};
+
+//creating a variable to render the text on each currency converter div.
+let toText = text.firstText;
+let fromText = text.secondText;
 
 const Currency = () => {
   const [currencyOptions, setCurrencyOptions] = useState([]);
@@ -31,7 +41,7 @@ const Currency = () => {
   }
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.request(options);
+      const response = await axios.request(converterAPI);
       const data = await response.data;
       const firstCurrency = Object.keys(data.rates)[47];
       setCurrencyOptions([...Object.keys(data.rates)]);
@@ -45,7 +55,7 @@ const Currency = () => {
   useEffect(() => {
     if (fromCurrency != null && toCurrency != null) {
       const fetchData = async () => {
-        const response = await axios.request(options);
+        const response = await axios.request(converterAPI);
         const data = await response.data;
         setExchangeRate(data.rates[toCurrency]);
       };
@@ -69,6 +79,7 @@ const Currency = () => {
         onChangeCurrency={(e) => setFromCurrency(e.target.value)}
         amount={fromAmount}
         onChangeAmount={handleFromAmountChange}
+        text={toText}
       />
       <Rates value={toAmount} />
       <CurrencyConverter
@@ -77,6 +88,7 @@ const Currency = () => {
         onChangeCurrency={(e) => setToCurrency(e.target.value)}
         amount={toAmount}
         onChangeAmount={handleToAmountChange}
+        text={fromText}
       />
     </>
   );
