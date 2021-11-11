@@ -50,6 +50,7 @@ The flags were not included in the Payout Card due to issues with the API.
 # ISSUES FACED WHILE COMPLETING THE ASSESSMENT
 1. The major Issue I faced was the API issue. The API from [Xe Currency](https://www.xe.com/currencyconverter/) returns the country flags along side the short name but I could not use it because I onlly had access to only the http url and not https, so I will need to make a subscription before I can make an API call using the https. 
 2. The second issue faces was understanding the flow of the App and the steps to take in building it which I finally figured out. 
+3. Code Documentation/Commenting => Not all components were commented/documented because it took a while to make all the logic of the app to work,and submission day was due so had to forward the code delviery and make the comment afterwards.
 
 # CONSTRUCTIVE FEEDBACK 
 My only feedback as of now is that, there should be a Back Button which allows user to easily go back probably if they make a mistake or they just want to verify the information entered previously. They should not necessarily have to click the stepper button to move back. 
